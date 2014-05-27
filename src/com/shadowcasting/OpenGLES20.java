@@ -13,7 +13,7 @@ import android.os.Bundle;
 public class OpenGLES20 extends Activity
 {
 	private GLSurfaceView mGLView;
-	public MyGL20Renderer mRenderer;
+	public GL20Renderer mRenderer;
 	
 	private SensorManager sensorManager;
 	private Sensor gyroscope;
@@ -28,7 +28,7 @@ public class OpenGLES20 extends Activity
 		setContentView(mGLView);
 
 		mGLView.setEGLContextClientVersion(2);
-		mRenderer = new MyGL20Renderer();
+		mRenderer = new GL20Renderer();
 		mGLView.setRenderer(mRenderer);
 		
 	    sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -41,7 +41,7 @@ public class OpenGLES20 extends Activity
 		    int POS = 0;
 		    float[][] prev = new float[POINTS][3];
 		    
-		    float angle = 0;
+		    //float angle = 0;
 	    	
 			@Override
 			public void onSensorChanged(SensorEvent event)
